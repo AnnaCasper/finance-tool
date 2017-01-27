@@ -5,6 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { NameListService } from '../shared/name-list/name-list.service';
 
+import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
+
 @NgModule({
   imports: [CommonModule, HomeRoutingModule, SharedModule],
   declarations: [HomeComponent],
