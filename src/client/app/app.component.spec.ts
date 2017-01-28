@@ -15,6 +15,9 @@ import {
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { ResourceComponent } from './resource/resource.component';
+import { StartComponent } from './start/start.component';
+import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 
 export function main() {
@@ -23,7 +26,10 @@ export function main() {
 
     let config: Route[] = [
       { path: '', component: HomeComponent },
-      { path: 'about', component: AboutComponent }
+      { path: 'about', component: AboutComponent },
+      { path: 'login', component: LoginComponent },
+      { path: 'resource', component: ResourceComponent },
+      { path: 'start', component: StartComponent }
     ];
     beforeEach(() => {
       TestBed.configureTestingModule({
