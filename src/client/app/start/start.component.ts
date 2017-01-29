@@ -20,10 +20,20 @@ export class StartComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
+    this.initializeArrays();
   }
 
-  openModal(modal: any) {
-    modal.show();
+  initializeArrays(){
+      this.networth.carValues = [];
+      this.networth.homeValues = [];
+      this.networth.retirmentAccountsValues = [];
+      this.networth.otherInvestmentsValues = [];
+      this.networth.additionalAssetsValues = [];
+      this.networth.creditCardsValues = [];
+      this.networth.carLoansValues = [];
+      this.networth.homeLoansValues = [];
+      this.networth.schoolLoansValues = [];
+      this.networth.additionalDebtsValues = [];
   }
 
 }
