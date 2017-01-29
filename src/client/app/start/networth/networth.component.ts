@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Networth } from '../../shared/models/networth'
 import { Asset } from '../../shared/models/asset';
 import { Debt } from '../../shared/models/debt';
+import { NameListService } from '../../shared/name-list/name-list.service';
 
 /**
  * This class represents the lazy loaded NetworthComponent.
@@ -22,7 +23,13 @@ export class NetworthComponent implements OnInit {
   asset: Asset = new Asset;
   debt: Debt = new Debt;
 
-  constructor() {}
+  /**
+   * Creates an instance of the ResourceComponent with the injected
+   * NameListService.
+   *
+   * @param {NameListService} nameListService - The injected NameListService.
+   */
+  constructor(public nameListService: NameListService) {}
 
   /**
    * Get the names OnInit

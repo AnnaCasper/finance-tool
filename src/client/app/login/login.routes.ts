@@ -6,4 +6,4 @@ export const LoginRoutes: Route[] = [
     path: 'login',
     component: LoginComponent
     }
-]
+];

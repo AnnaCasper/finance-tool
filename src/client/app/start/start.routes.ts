@@ -6,4 +6,4 @@ export const StartRoutes: Route[] = [
     path: 'start',
     component: StartComponent
     }
-]
+];

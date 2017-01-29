@@ -6,4 +6,4 @@ export const ResourceRoutes: Route[] = [
     path: 'resource',
     component: ResourceComponent
     }
-]
+];

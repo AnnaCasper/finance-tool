@@ -1,5 +1,5 @@
 export class Debt {
     name: string;
-    interestRate: number
+    interestRate: number;
     value: number;
 }

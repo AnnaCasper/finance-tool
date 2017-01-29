@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Networth } from '../shared/models/networth';
+import { NameListService } from '../shared/name-list/name-list.service';
+
 /**
  * This class represents the lazy loaded StartComponent.
  */
@@ -17,7 +19,13 @@ export class StartComponent implements OnInit {
   showNetworthPanel: boolean = false;
   networth: Networth = new Networth;
 
-  constructor() {}
+  /**
+   * Creates an instance of the ResourceComponent with the injected
+   * NameListService.
+   *
+   * @param {NameListService} nameListService - The injected NameListService.
+   */
+  constructor(public nameListService: NameListService) {}
 
   ngOnInit() {
     this.initializeArrays();

@@ -20,12 +20,12 @@ import { SharedModule } from './shared/shared.module';
 import { NetworthComponent } from './start/networth/networth.component';
 
 @NgModule({
-  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), AppRoutingModule, 
-  
+  imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), AppRoutingModule,
+
   AboutModule, StartModule, LoginModule, ResourceModule, HomeModule, SharedModule.forRoot(),
-  
+
   Ng2BootstrapModule, ModalModule.forRoot()
-  
+
   ],
   declarations: [AppComponent],
   providers: [{

@@ -6,4 +6,4 @@ export const HomeRoutes: Route[] = [
     path: 'home',
     component: HomeComponent
     }
-]
+];

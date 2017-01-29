@@ -22,7 +22,7 @@ export class Networth {
     haveHomeLoan: boolean;
     homeLoansValues: Debt[];
     haveSchoolLoans: boolean;
-    schoolLoansValues: Debt[]
+    schoolLoansValues: Debt[];
     haveAdditionalDebt: boolean;
     additionalDebtsValues: Debt[];
     totalDebt: number;

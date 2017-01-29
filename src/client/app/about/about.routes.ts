@@ -6,4 +6,4 @@ export const AboutRoutes: Route[] = [
     path: 'about',
     component: AboutComponent
     }
-]
+];
