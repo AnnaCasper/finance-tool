@@ -11,3 +11,8 @@ ul {
   list-style-type: none;
   padding: 0 0 0 8px;
 }
+
+.panel {
+  background-color: #5f9ea0;
+  color: #ffffff;
+}

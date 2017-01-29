@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { routes } from './app.routes';
 
 import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { ModalModule } from 'ng2-bootstrap';
 
 import { AboutModule } from './about/about.module';
 import { StartModule } from './start/start.module';
@@ -16,12 +17,14 @@ import { ResourceModule } from './resource/resource.module';
 import { HomeModule } from './home/home.module';
 import { SharedModule } from './shared/shared.module';
 
+import { NetworthComponent } from './start/networth/networth.component';
+
 @NgModule({
   imports: [BrowserModule, HttpModule, RouterModule.forRoot(routes), AppRoutingModule, 
   
   AboutModule, StartModule, LoginModule, ResourceModule, HomeModule, SharedModule.forRoot(),
   
-  Ng2BootstrapModule
+  Ng2BootstrapModule, ModalModule.forRoot()
   
   ],
   declarations: [AppComponent],

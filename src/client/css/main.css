@@ -14,7 +14,7 @@ div {
 
 /* Set up a default font and some padding to provide breathing room */
 body {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Railway, sans-serif !important;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,3 +62,39 @@ button:hover {
   background-color: #28739e;
 }
 
+h1 {
+  font-family: 'Abril Fatface', cursive !important;
+  font-size: 72px !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+hr {
+  border-top: 1px solid #ffffff !important;
+}
+
+.full-line {
+  width: 100%;
+}
+
+.float-right {
+  float:right;
+}
+
+.float-left {
+  float:left;
+}
+
+input {
+  border: 1px solid black !important;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}

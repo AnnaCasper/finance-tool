@@ -1,0 +1,11 @@
+h4 {
+    text-shadow: none !important;
+}
+
+.panel-content {
+    padding: 30px;
+}
+
+i:hover {
+    cursor:pointer;
+}

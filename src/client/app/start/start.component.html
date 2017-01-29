@@ -1,3 +1,35 @@
-<p>Let's Get Started!</p>
+<div class="row">
+    <div id="step1div" class="col-sm-12 text-center">
+        <h1>Step 1</h1>
+        <h2>Know your Worth</h2>
+        <p>We all have to have a starting point. Let's figure out where yours is by taking stock of your debts and assets.</p>
+        <br>
+        <a *ngIf="!showNetworthPanel" class="btn btn-lg btn-success lets-go" (click)="showNetworthPanel = !showNetworthPanel">Let's Go!</a>
+        <div *ngIf="showNetworthPanel" class="row">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-8">
+                <div class="panel panel-default">
+                    <div class="row panel-padding">
+                        <sd-networth [networth]="networth"></sd-networth>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2"></div>
+        </div>
+        <br>
+        <hr>
+    </div>
+</div>
+<div class="row">
+    <div id="step1div" class="col-sm-12 text-center">
+        <h1>Step 2</h1>
+        <h2>Budget Calculator</h2>
+        <p>Based off of you yearly salary, let's find out how much you should be spending each month and where.</p>
+        <br>
+        <a class="btn btn-lg btn-success lets-go">Let's Go!</a>
+        <br>
+        <hr>
+    </div>
+</div>
 
 
