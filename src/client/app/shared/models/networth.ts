@@ -5,9 +5,9 @@ export class Networth {
     checking: number;
     savings: number;
     ownHome: boolean;
-    homeValues: Asset[];
+    homeValue: number;
     ownCar: boolean;
-    carValues: Asset[];
+    carValue: number;
     haveRetirmentAccounts: boolean;
     retirmentAccountsValues: Asset[];
     haveOtherInvestments: boolean;

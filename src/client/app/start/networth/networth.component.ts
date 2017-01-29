@@ -35,6 +35,18 @@ export class NetworthComponent implements OnInit {
    * Get the names OnInit
    */
   ngOnInit() {
+      this.initializeArrays(this.networth);
+  }
+
+  initializeArrays(networth: Networth){
+      this.networth.retirmentAccountsValues = [];
+      this.networth.otherInvestmentsValues = [];
+      this.networth.additionalAssetsValues = [];
+      this.networth.creditCardsValues = [];
+      this.networth.carLoansValues = [];
+      this.networth.homeLoansValues = [];
+      this.networth.schoolLoansValues = [];
+      this.networth.additionalDebtsValues = [];
   }
 
   forward() {
@@ -45,41 +57,8 @@ export class NetworthComponent implements OnInit {
       this.question -= 1;
   }
 
-  addToArray(item: any, type: string) {
-      if(type === 'cars') {
-          this.networth.carValues.push(item);
-      }
-      if(type === 'homes') {
-          this.networth.homeValues.push(item);
-      }
-      if(type === 'retirement') {
-          this.networth.retirmentAccountsValues.push(item);
-      }
-      if(type === 'investments') {
-          this.networth.otherInvestmentsValues.push(item);
-      }
-      if(type === 'additionalAssets') {
-          this.networth.additionalAssetsValues.push(item);
-      }
-      if(type === 'creditCards') {
-          this.networth.creditCardsValues.push(item);
-      }
-      if(type === 'carLoan') {
-          this.networth.carLoansValues.push(item);
-      }
-      if(type === 'homeLoan') {
-          this.networth.homeLoansValues.push(item);
-      }
-      if(type === 'schoolLoan') {
-          this.networth.schoolLoansValues.push(item);
-      }
-      if(type === 'additionalDebt') {
-          this.networth.additionalDebtsValues.push(item);
-      }
-  }
-
-  calculate() {
-      console.log(this.networth);
+  addToArray(item: any, array: any[]) {
+      array.push(item);
   }
 
   openModal(modal: any) {
