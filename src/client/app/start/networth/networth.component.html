@@ -32,11 +32,11 @@
         </div>
         <div *ngIf="question === 6" class="col-sm-12">
             <h4 class="full-line">Do you have any retirement accounts?</h4>
-            <input type="radio" name="car" [(ngModel)]="networth.haveRetirementAccounts" value="true"> Yes
-            <input type="radio" name="car" [(ngModel)]="networth.haveRetirementAccounts" value="false"> No
+            <input type="radio" name="retirement" [(ngModel)]="networth.haveRetirementAccounts" value="true"> Yes
+            <input type="radio" name="retirement" [(ngModel)]="networth.haveRetirementAccounts" value="false"> No
             <div *ngIf="networth.retirementAccountsValues && networth.retirementAccountsValues.length > 0">
-                <div *ngFor="let account of networth.retirmentAccountsValues" class="row">
-                    {{account.name}}: {{account.value}}
+                <div *ngFor="let asset of networth.retirmentAccountsValues" class="row">
+                    {{asset.name}}: {{asset.value}}
                 </div>
             </div>
             <div *ngIf="networth.haveRetirementAccounts">
@@ -49,14 +49,199 @@
                     <input type="number" class="float-left" [(ngModel)]="asset.value">
                 </div>
                 <div class="col-sm-6">
-                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, 'retirement')"></i>
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, networth.retirementAccountsValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 7" class="col-sm-12">
+            <h4 class="full-line">Do you have any other investments?</h4>
+            <p>Such as stocks, bonds, etc.</p>
+            <input type="radio" name="investments" [(ngModel)]="networth.haveOtherInvestments" value="true"> Yes
+            <input type="radio" name="investments" [(ngModel)]="networth.haveOtherInvestments" value="false"> No
+            <div *ngIf="networth.otherInvestmentsValues && networth.otherInvestmentsValues.length > 0">
+                <div *ngFor="let asset of networth.otherInvestmentsValues" class="row">
+                    {{asset.name}}: {{asset.value}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveOtherInvestments">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="asset.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Amount:</label>
+                    <input type="number" class="float-left" [(ngModel)]="asset.value">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, networth.otherInvestmentsValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 8" class="col-sm-12">
+            <h4 class="full-line">Do you have any additional assets?</h4>
+            <p>Such as personal property.</p>
+            <input type="radio" name="car" [(ngModel)]="networth.haveAdditionalAssets" value="true"> Yes
+            <input type="radio" name="car" [(ngModel)]="networth.haveAdditionalAssets" value="false"> No
+            <div *ngIf="networth.additionalAssetsValues && networth.additionalAssetsValues.length > 0">
+                <div *ngFor="let asset of networth.additionalAssetsValues" class="row">
+                    {{asset.name}}: {{asset.value}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveAdditionalAssets">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="asset.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Amount:</label>
+                    <input type="number" class="float-left" [(ngModel)]="asset.value">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, networth.additionalAssetsValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 9" class="col-sm-12">
+            <h4 class="full-line">Do you have any credit cards?</h4>
+            <input type="radio" name="creditCard" [(ngModel)]="networth.haveCreditCards" value="true"> Yes
+            <input type="radio" name="creditCard" [(ngModel)]="networth.haveCreditCards" value="false"> No
+            <div *ngIf="networth.creditCardsValues && networth.creditCardsValues.length > 0">
+                <div *ngFor="let debt of networth.creditCardsValues" class="row">
+                    {{debt.name}}: {{debt.value}} {{debt.interest}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveCreditCards">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="debt.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Balance:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.value">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Interest Rate:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.interest">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, networth.creditCardsValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 10" class="col-sm-12">
+            <h4 class="full-line">Do you have any car loans?</h4>
+            <input type="radio" name="carLoan" [(ngModel)]="networth.haveCarLoan" value="true"> Yes
+            <input type="radio" name="carLoan" [(ngModel)]="networth.haveCarLoan" value="false"> No
+            <div *ngIf="networth.carLoansValues && networth.carLoansValues.length > 0">
+                <div *ngFor="let debt of networth.carLoansValues" class="row">
+                    {{debt.name}}: {{debt.value}} {{debt.interest}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveCarLoan">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="debt.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Balance:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.value">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Interest Rate:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.interest">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, networth.carLoansValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 11" class="col-sm-12">
+            <h4 class="full-line">Do you have any home loans?</h4>
+            <input type="radio" name="homeLoan" [(ngModel)]="networth.haveHomeLoan" value="true"> Yes
+            <input type="radio" name="homeLoan" [(ngModel)]="networth.haveHomeLoan" value="false"> No
+            <div *ngIf="networth.homeLoansValues && networth.homeLoansValues.length > 0">
+                <div *ngFor="let debt of networth.homeLoansValues" class="row">
+                    {{debt.name}}: {{debt.value}} {{debt.interest}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveHomeLoan">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="debt.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Balance:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.value">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Interest Rate:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.interest">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, networth.homeLoansValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 12" class="col-sm-12">
+            <h4 class="full-line">Do you have any school loans?</h4>
+            <input type="radio" name="schoolLoan" [(ngModel)]="networth.haveSchoolLoans" value="true"> Yes
+            <input type="radio" name="schoolLoan" [(ngModel)]="networth.haveSchoolLoans" value="false"> No
+            <div *ngIf="networth.schoolLoansValues && networth.schoolLoansValues.length > 0">
+                <div *ngFor="let debt of networth.schoolLoansValues" class="row">
+                    {{debt.name}}: {{debt.value}} {{debt.interest}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveSchoolLoan">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="debt.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Balance:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.value">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Interest Rate:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.interest">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, networth.schoolLoansValues)"></i>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="question === 13" class="col-sm-12">
+            <h4 class="full-line">Do you have any additional debts?</h4>
+            <input type="radio" name="additionalDebt" [(ngModel)]="networth.haveAdditionalDebt" value="true"> Yes
+            <input type="radio" name="additionaDebt" [(ngModel)]="networth.haveAdditionalDebt" value="false"> No
+            <div *ngIf="networth.additionalDebtsValues && networth.additionalDebtsValues.length > 0">
+                <div *ngFor="let debt of networth.additionalDebtsValues" class="row">
+                    {{debt.name}}: {{debt.value}} {{debt.interest}}
+                </div>
+            </div>
+            <div *ngIf="networth.haveAdditionalDebt">
+                <div class="col-sm-6 float-right">
+                    <label class="full-line text-right">Name:</label>
+                    <input type="text" class="float-right" [(ngModel)]="debt.name">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Balance:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.value">
+                </div>
+                <div class="col-sm-6">
+                    <label class="full-line text-left">Interest Rate:</label>
+                    <input type="number" class="float-left" [(ngModel)]="debt.interest">
+                </div>
+                <div class="col-sm-6">
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, networth.additionalDebtsValues)"></i>
+                </div>
             </div>
         </div>
     </div>
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-        <i class="fa fa-3x fa-arrow-circle-right float-right" aria-hidden="true" (click)="forward()"></i>
+        <a *ngIf="question === 13" class="btn btn-success float-right">Calculate</a>
+        <i *ngIf="question < 13" class="fa fa-3x fa-arrow-circle-right float-right" aria-hidden="true" (click)="forward()"></i>
         <i *ngIf="question > 1" class="fa fa-3x fa-arrow-circle-left float-left" aria-hidden="true" (click)="back()"></i>
         </div>
         <div class="col-cm-1"></div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Networth } from '../../shared/models/networth'
 import { Asset } from '../../shared/models/asset';
+import { Debt } from '../../shared/models/debt';
 
 /**
  * This class represents the lazy loaded NetworthComponent.
@@ -19,6 +20,7 @@ export class NetworthComponent implements OnInit {
   names: any[] = [];
   question: number = 1;
   asset: Asset = new Asset;
+  debt: Debt = new Debt;
 
   constructor() {}
 
@@ -26,6 +28,18 @@ export class NetworthComponent implements OnInit {
    * Get the names OnInit
    */
   ngOnInit() {
+      this.initializeArrays(this.networth);
+  }
+
+  initializeArrays(networth: Networth){
+      this.networth.retirmentAccountsValues = [];
+      this.networth.otherInvestmentsValues = [];
+      this.networth.additionalAssetsValues = [];
+      this.networth.creditCardsValues = [];
+      this.networth.carLoansValues = [];
+      this.networth.homeLoansValues = [];
+      this.networth.schoolLoansValues = [];
+      this.networth.additionalDebtsValues = [];
   }
 
   forward() {
@@ -36,12 +50,8 @@ export class NetworthComponent implements OnInit {
       this.question -= 1;
   }
 
-  addToArray(item: any, type: string) {
-      if(type === 'retirement') {
-          this.networth.retirmentAccountsValues = [];
-          this.networth.retirmentAccountsValues.push(item);
-          console.log(this.networth.retirmentAccountsValues);
-      }
+  addToArray(item: any, array: any[]) {
+      array.push(item);
   }
 
   openModal(modal: any) {

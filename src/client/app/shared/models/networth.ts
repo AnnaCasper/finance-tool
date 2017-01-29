@@ -16,15 +16,15 @@ export class Networth {
     additionalAssetsValues: Asset[];
     totalAssets: number;
     haveCreditCards: boolean;
-    ceditCardsValues: Debt[];
+    creditCardsValues: Debt[];
     haveCarLoan: boolean;
     carLoansValues: Debt[];
     haveHomeLoan: boolean;
     homeLoansValues: Debt[];
-    haveMedicalBills: boolean;
-    medicalBillsValues: Debt[];
     haveSchoolLoans: boolean;
     schoolLoansValues: Debt[]
+    haveAdditionalDebt: boolean;
+    additionalDebtsValues: Debt[];
     totalDebt: number;
     networth: number;
 }
