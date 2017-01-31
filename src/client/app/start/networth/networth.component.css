@@ -9,3 +9,16 @@ h4 {
 i:hover {
     cursor:pointer;
 }
+
+#networthPanel {
+    padding: 30px;
+}
+
+input[type="radio"] {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+
+#calculateDiv {
+    padding:20px;
+}

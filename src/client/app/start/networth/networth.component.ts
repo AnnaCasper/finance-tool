@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { Networth } from '../../shared/models/networth';
 import { Asset } from '../../shared/models/asset';
 import { Debt } from '../../shared/models/debt';
@@ -15,6 +15,7 @@ import { NameListService } from '../../shared/name-list/name-list.service';
 })
 export class NetworthComponent implements OnInit {
     @Input() networth: Networth;
+    @Output() onCalculate = new EventEmitter<boolean>();
 
   newName: string = '';
   errorMessage: string;
@@ -97,7 +98,7 @@ export class NetworthComponent implements OnInit {
       this.networth.totalAssets = this.calculateAssets(this.networth);
       this.networth.totalDebt = this.calculateDebt(this.networth);
       this.calculateNetworth(this.networth.totalAssets, this.networth.totalDebt);
-      this.question += 1;
+      this.onCalculate.emit(true);
   }
 
   calculateAssets(net: Networth) {

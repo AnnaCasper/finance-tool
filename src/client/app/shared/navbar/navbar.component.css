@@ -34,3 +34,7 @@ li {
 nav a:hover {
     text-decoration: underline;
 }
+
+.rain-logo {
+    color: #5f9ea0;
+}

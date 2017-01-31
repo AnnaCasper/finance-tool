@@ -1,26 +1,29 @@
 <div class="row">
     <div id="step1div" class="col-sm-12 text-center">
         <h1>Step 1</h1>
-        <h2>Know your Worth</h2>
+        <h2>Know Your Worth</h2>
         <p>We all have to have a starting point. Let's figure out where yours is by taking stock of your debts and assets.</p>
         <br>
-        <a *ngIf="!showNetworthPanel" class="btn btn-lg btn-success lets-go" (click)="showNetworthPanel = !showNetworthPanel">Let's Go!</a>
+        <a *ngIf="showStartButton" class="btn btn-lg btn-success lets-go" (click)="start()">START</a>
         <div *ngIf="showNetworthPanel" class="row">
             <div class="col-sm-2"></div>
             <div class="col-sm-8">
                 <div class="panel panel-default">
                     <div class="row panel-padding">
-                        <sd-networth [networth]="networth"></sd-networth>
+                        <sd-networth [networth]="networth" (onCalculate)="onCalculate($event)"></sd-networth>
                     </div>
                 </div>
             </div>
             <div class="col-sm-2"></div>
         </div>
+        <div *ngIf="showNetworthTotals">
+            <h3>Your Networth is $ {{networth.networth}}</h3>
+        </div>
         <br>
         <hr>
     </div>
 </div>
-<div class="row">
+<!--<div class="row">
     <div id="step1div" class="col-sm-12 text-center">
         <h1>Step 2</h1>
         <h2>Budget Calculator</h2>
@@ -30,6 +33,6 @@
         <br>
         <hr>
     </div>
-</div>
+</div>-->
 
 

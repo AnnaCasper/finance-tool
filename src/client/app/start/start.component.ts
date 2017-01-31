@@ -17,6 +17,8 @@ export class StartComponent implements OnInit {
   errorMessage: string;
   names: any[] = [];
   showNetworthPanel: boolean = false;
+  showNetworthTotals: boolean = false;
+  showStartButton: boolean = true;
   networth: Networth = new Networth;
 
   /**
@@ -44,4 +46,13 @@ export class StartComponent implements OnInit {
       this.networth.additionalDebtsValues = [];
   }
 
+  start() {
+    this.showStartButton = !this.showStartButton;
+    this.showNetworthPanel = !this.showNetworthPanel;
+  }
+
+  onCalculate(boolean: boolean) {
+    this.showNetworthPanel = !this.showNetworthPanel;
+    this.showNetworthTotals = !this.showNetworthTotals;
+  }
 }
