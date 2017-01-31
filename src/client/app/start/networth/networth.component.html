@@ -31,7 +31,7 @@
                     <input type="number" class="float-left" [(ngModel)]="asset.value">
                 </div>
                 <div class="col-sm-6">
-                    <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, 'homes', 'asset')"></i>
+                <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, 'homes', 'asset')"></i>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@
                 </div>
                 <div class="col-sm-6">
                 <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, 'retirement', 'asset')"></i>
-            </div>
+                </div>
             </div>
         </div>
         <div *ngIf="question === 7" class="col-sm-12">
@@ -102,7 +102,7 @@
                 </div>
                 <div class="col-sm-6">
                 <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, 'investments', 'asset')"></i>
-            </div>
+                </div>
             </div>
         </div>
         <div *ngIf="question === 8" class="col-sm-12">
@@ -126,7 +126,7 @@
                 </div>
                 <div class="col-sm-6">
                 <i class="fa fa-2x fa-plus full-line" (click)="addToArray(asset, 'additionalAssets', 'asset')"></i>
-            </div>
+                </div>
             </div>
         </div>
         <div *ngIf="question === 9" class="col-sm-12">
@@ -153,7 +153,7 @@
                 </div>
                 <div class="col-sm-6">
                 <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, 'creditCards', 'debt')"></i>
-            </div>
+                </div>
             </div>
         </div>
         <div *ngIf="question === 10" class="col-sm-12">
@@ -180,7 +180,7 @@
                 </div>
                 <div class="col-sm-6">
                 <i class="fa fa-2x fa-plus full-line" (click)="addToArray(debt, 'carLoan', 'debt')"></i>
-            </div>
+                </div>
             </div>
         </div>
         <div *ngIf="question === 11" class="col-sm-12">
@@ -268,7 +268,7 @@
     <div *ngIf="question <= 13" class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-        <a *ngIf="question === 13" class="btn btn-success float-right">Calculate</a>
+        <a *ngIf="question === 13" class="btn btn-success float-right" (click)="calculate()">Calculate</a>
         <i *ngIf="question < 13" class="fa fa-3x fa-arrow-circle-right float-right" aria-hidden="true" (click)="forward()"></i>
         <i *ngIf="question > 1" class="fa fa-3x fa-arrow-circle-left float-left" aria-hidden="true" (click)="back()"></i>
         </div>

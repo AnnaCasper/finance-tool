@@ -16,3 +16,8 @@ ul {
   background-color: #5f9ea0;
   color: #ffffff;
 }
+
+.lets-go {
+  background-image: linear-gradient(#744D5F, #673C4F 60%, #5E3748) !important;
+  background-color: #673C4F !important;
+}
