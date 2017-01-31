@@ -8,8 +8,8 @@ export class Networth {
     homeValues: Asset[];
     ownCar: boolean;
     carValues: Asset[];
-    haveRetirmentAccounts: boolean;
-    retirmentAccountsValues: Asset[];
+    haveRetirementAccounts: boolean;
+    retirementAccountsValues: Asset[];
     haveOtherInvestments: boolean;
     otherInvestmentsValues: Asset[];
     haveAdditionalAsset: boolean;

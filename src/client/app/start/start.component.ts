@@ -31,10 +31,10 @@ export class StartComponent implements OnInit {
     this.initializeArrays();
   }
 
-  initializeArrays(){
+  initializeArrays() {
       this.networth.carValues = [];
       this.networth.homeValues = [];
-      this.networth.retirmentAccountsValues = [];
+      this.networth.retirementAccountsValues = [];
       this.networth.otherInvestmentsValues = [];
       this.networth.additionalAssetsValues = [];
       this.networth.creditCardsValues = [];
