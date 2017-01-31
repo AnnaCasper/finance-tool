@@ -28,7 +28,6 @@ export class StartComponent implements OnInit {
   constructor(public nameListService: NameListService) {}
 
   ngOnInit() {
-    this.initializeArrays();
   }
 
   initializeArrays() {

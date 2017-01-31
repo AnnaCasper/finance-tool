@@ -35,8 +35,23 @@ export class NetworthComponent implements OnInit {
    * Get the names OnInit
    */
   ngOnInit() {
+<<<<<<< HEAD
       console.log(this.networth)
     this.getNames();
+=======
+      this.initializeArrays(this.networth);
+  }
+
+  initializeArrays(networth: Networth){
+      this.networth.retirmentAccountsValues = [];
+      this.networth.otherInvestmentsValues = [];
+      this.networth.additionalAssetsValues = [];
+      this.networth.creditCardsValues = [];
+      this.networth.carLoansValues = [];
+      this.networth.homeLoansValues = [];
+      this.networth.schoolLoansValues = [];
+      this.networth.additionalDebtsValues = [];
+>>>>>>> eec15235b3cd69c25f7ed266a62ce3301b32129a
   }
 
   forward() {
@@ -47,6 +62,7 @@ export class NetworthComponent implements OnInit {
       this.question -= 1;
   }
 
+<<<<<<< HEAD
   getNames() {
     this.nameListService.get()
       .subscribe(
@@ -166,6 +182,10 @@ export class NetworthComponent implements OnInit {
           }
       }
       return total;
+=======
+  addToArray(item: any, array: any[]) {
+      array.push(item);
+>>>>>>> eec15235b3cd69c25f7ed266a62ce3301b32129a
   }
 
   calculateNetworth(assets: number, debt: number) {
