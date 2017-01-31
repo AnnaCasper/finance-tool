@@ -35,7 +35,6 @@ export class NetworthComponent implements OnInit {
    * Get the names OnInit
    */
   ngOnInit() {
-      console.log(this.networth)
     this.getNames();
   }
 
@@ -91,7 +90,7 @@ export class NetworthComponent implements OnInit {
             this.networth.additionalDebtsValues.push(item);
         }
         this.debt = new Debt;
-      } 
+      }
   }
 
   calculate() {
@@ -116,12 +115,12 @@ export class NetworthComponent implements OnInit {
       }
       if(net.ownCar) {
           for(var asset of net.carValues) {
-              total += asset.value
+              total += asset.value;
           }
       }
       if(net.haveRetirementAccounts) {
           for(var asset of net.retirementAccountsValues) {
-              total += asset.value
+              total += asset.value;
           }
       }
       if(net.haveOtherInvestments) {
@@ -131,7 +130,7 @@ export class NetworthComponent implements OnInit {
       }
       if(net.haveAdditionalAsset) {
           for(var asset of net.additionalAssetsValues) {
-              total += asset.value
+              total += asset.value;
           }
       }
       return total;
@@ -161,7 +160,7 @@ export class NetworthComponent implements OnInit {
       }
       if(net.haveAdditionalDebt) {
           for(var debt of net.additionalDebtsValues) {
-              total += debt.value
+              total += debt.value;
           }
       }
       return total;
