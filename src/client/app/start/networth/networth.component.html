@@ -291,7 +291,7 @@
                                 <tr *ngFor="let debt of networth.carLoansValues" class="text-left">
                                 <td>{{debt.name}}</td>
                                 <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
-                                <td>{{debt.interest}}</td>
+                                <td>{{debt.interest}} %</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -334,7 +334,7 @@
                                 <tr *ngFor="let debt of networth.homeLoansValues" class="text-left">
                                 <td>{{debt.name}}</td>
                                 <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
-                                <td>{{debt.interest}}</td>
+                                <td>{{debt.interest}} %</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -377,7 +377,7 @@
                                 <tr *ngFor="let debt of networth.schoolLoansValues" class="text-left">
                                 <td>{{debt.name}}</td>
                                 <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
-                                <td>{{debt.interest}}</td>
+                                <td>{{debt.interest}} %</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -420,7 +420,7 @@
                                 <tr *ngFor="let debt of networth.additionalDebtsValues" class="text-left">
                                 <td>{{debt.name}}</td>
                                 <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
-                                <td>{{debt.interest}}</td>
+                                <td>{{debt.interest}} %</td>
                                 </tr>
                             </tbody>
                         </table>
