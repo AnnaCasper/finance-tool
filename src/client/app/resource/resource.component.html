@@ -1,5 +1,51 @@
 <div class="row">
-    <div id="resourceDiv" class="col-sm-12 text-center">
-        <h1>Resources</h1>
+    <div id="step1div" class="col-sm-12 text-center">
+        <h1>Step 1</h1>
+        <h2>Know Your Worth</h2>
+        <p>We all have to have a starting point. Let's figure out where yours is by taking stock of your debts and assets.</p>
+        <br>
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10 text-left">
+            <h3>Here's where you stand:</h3>
+            <br />
+            <div class="col-sm-12">
+                <h4>Assets</h4>
+                <p class="full-line">{{currentNetworth.totalAssets | currency:'USD':true:'1.2-2'}}</p>
+            </div>
+            <div class="col-sm-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" [style.width]="currentNetworth.checkingPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-success" [style.width]="currentNetworth.savingsPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-warning" [style.width]="currentNetworth.homeValuesPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-danger" [style.width]="currentNetworth.carValuesPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-info" [style.width]="currentNetworth.retirementAccountsPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-success" [style.width]="currentNetworth.otherInvestmentsPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-warning" [style.width]="currentNetworth.additionalAssetPercent + '%'"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="col-sm-12">
+                <h4>Debt</h4>
+                <p class="full-line">{{currentNetworth.totalDebt | currency:'USD':true:'1.2-2'}}</p>
+            </div>
+            <div class="col-sm-12">
+                <div class="progress">
+                    <div class="progress-bar progress-bar-info" [style.width]="currentNetworth.creditCardsPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-success" [style.width]="currentNetworth.carLoansPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-warning" [style.width]="currentNetworth.homeLoansPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-danger" [style.width]="currentNetworth.schoolLoansPercent + '%'"></div>
+                    <div class="progress-bar progress-bar-info" [style.width]="currentNetworth.additionalDebtPercent + '%'"></div>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="col-sm-12">
+                <h4>Your Networth</h4>
+                <p class="full-line">{{currentNetworth.networth | currency:'USD':true:'1.2-2'}}</p>
+            </div>
+        </div>
+        <div class='col-sm-1'></div>
+        <br>
     </div>
 </div>

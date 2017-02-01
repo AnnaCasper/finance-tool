@@ -99,3 +99,7 @@ input {
   text-align: left;
 }
 
+.progress {
+  background-image: none;
+  background-color: #1c1e22 !important;
+}
