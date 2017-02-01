@@ -14,7 +14,6 @@ div {
 
 /* Set up a default font and some padding to provide breathing room */
 body {
-  min-width: 501px !important;
   font-family: Railway, sans-serif !important;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;

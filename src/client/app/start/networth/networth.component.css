@@ -11,7 +11,8 @@ i:hover {
 }
 
 #networthPanel {
-    padding: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 input[type="radio"] {
@@ -22,3 +23,9 @@ input[type="radio"] {
 #calculateDiv {
     padding:20px;
 }
+
+.arrow-column-left, .arrow-column-right {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+

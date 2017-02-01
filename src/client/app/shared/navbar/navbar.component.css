@@ -38,3 +38,7 @@ nav a:hover {
 .rain-logo {
     color: #5f9ea0;
 }
+
+nav {
+  min-width: 501px !important;
+}
