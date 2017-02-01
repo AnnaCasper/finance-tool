@@ -44,7 +44,7 @@
                             <tbody>
                                 <tr *ngFor="let asset of networth.homeValues" class="text-left">
                                 <td>{{asset.name}}</td>
-                                <td>{{asset.value}}</td>
+                                <td>{{asset.value | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -53,7 +53,7 @@
                         <form class="form-inline">
                             <input type="text" class="form-control" [(ngModel)]="asset.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="asset.value" name="value" placeholder="Value">
-                            <button class="btn btn-default" (click)="addToArray(asset, 'homes', 'asset')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(asset, 'homes', 'asset')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -84,7 +84,7 @@
                             <tbody>
                                 <tr *ngFor="let asset of networth.carValues" class="text-left">
                                 <td>{{asset.name}}</td>
-                                <td>{{asset.value}}</td>
+                                <td>{{asset.value | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -93,7 +93,7 @@
                         <form class="form-inline">
                             <input type="text" class="form-control" [(ngModel)]="asset.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="asset.value" name="value" placeholder="Value">
-                            <button class="btn btn-default" (click)="addToArray(asset, 'cars', 'asset')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(asset, 'cars', 'asset')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -124,7 +124,7 @@
                             <tbody>
                                 <tr *ngFor="let asset of networth.retirementAccountsValues" class="text-left">
                                 <td>{{asset.name}}</td>
-                                <td>{{asset.value}}</td>
+                                <td>{{asset.value | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -133,7 +133,7 @@
                         <form class="form-inline">
                             <input type="text" class="form-control" [(ngModel)]="asset.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="asset.value" name="value" placeholder="Value">
-                            <button class="btn btn-default" (click)="addToArray(asset, 'retirement', 'asset')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(asset, 'retirement', 'asset')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -165,7 +165,7 @@
                             <tbody>
                                 <tr *ngFor="let asset of networth.otherInvestmentsValues" class="text-left">
                                 <td>{{asset.name}}</td>
-                                <td>{{asset.value}}</td>
+                                <td>{{asset.value | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -174,7 +174,7 @@
                         <form class="form-inline">
                             <input type="text" class="form-control" [(ngModel)]="asset.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="asset.value" name="value" placeholder="Value">
-                            <button class="btn btn-default" (click)="addToArray(asset, 'investments', 'asset')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(asset, 'investments', 'asset')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -206,7 +206,7 @@
                             <tbody>
                                 <tr *ngFor="let asset of networth.additionalAssetsValues" class="text-left">
                                 <td>{{asset.name}}</td>
-                                <td>{{asset.value}}</td>
+                                <td>{{asset.value | currency:'USD':true:'1.2-2'}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -215,7 +215,7 @@
                         <form class="form-inline">
                             <input type="text" class="form-control" [(ngModel)]="asset.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="asset.value" name="value" placeholder="Value">
-                            <button class="btn btn-default" (click)="addToArray(asset, 'additionalAssets', 'asset')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(asset, 'additionalAssets', 'asset')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -247,8 +247,8 @@
                             <tbody>
                                 <tr *ngFor="let debt of networth.creditCardsValues" class="text-left">
                                 <td>{{debt.name}}</td>
-                                <td>{{debt.value}}</td>
-                                <td>{{debt.interest}}</td>
+                                <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
+                                <td>{{debt.interest}} %</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -258,7 +258,7 @@
                             <input type="text" class="form-control" [(ngModel)]="debt.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="debt.value" name="value" placeholder="Value">
                             <input type="number" class="form-control"[(ngModel)]="debt.interest" name="interest" placeholder="Interest Rate">
-                            <button class="btn btn-default" (click)="addToArray(debt, 'creditCards', 'debt')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(debt, 'creditCards', 'debt')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -290,7 +290,7 @@
                             <tbody>
                                 <tr *ngFor="let debt of networth.carLoansValues" class="text-left">
                                 <td>{{debt.name}}</td>
-                                <td>{{debt.value}}</td>
+                                <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
                                 <td>{{debt.interest}}</td>
                                 </tr>
                             </tbody>
@@ -301,7 +301,7 @@
                             <input type="text" class="form-control" [(ngModel)]="debt.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="debt.value" name="value" placeholder="Value">
                             <input type="number" class="form-control"[(ngModel)]="debt.interest" name="interest" placeholder="Interest Rate">
-                            <button class="btn btn-default" (click)="addToArray(debt, 'carLoan', 'debt')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(debt, 'carLoan', 'debt')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -333,7 +333,7 @@
                             <tbody>
                                 <tr *ngFor="let debt of networth.homeLoansValues" class="text-left">
                                 <td>{{debt.name}}</td>
-                                <td>{{debt.value}}</td>
+                                <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
                                 <td>{{debt.interest}}</td>
                                 </tr>
                             </tbody>
@@ -344,7 +344,7 @@
                             <input type="text" class="form-control" [(ngModel)]="debt.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="debt.value" name="value" placeholder="Value">
                             <input type="number" class="form-control"[(ngModel)]="debt.interest" name="interest" placeholder="Interest Rate">
-                            <button class="btn btn-default" (click)="addToArray(debt, 'homeLoan', 'debt')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(debt, 'homeLoan', 'debt')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -376,7 +376,7 @@
                             <tbody>
                                 <tr *ngFor="let debt of networth.schoolLoansValues" class="text-left">
                                 <td>{{debt.name}}</td>
-                                <td>{{debt.value}}</td>
+                                <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
                                 <td>{{debt.interest}}</td>
                                 </tr>
                             </tbody>
@@ -387,7 +387,7 @@
                             <input type="text" class="form-control" [(ngModel)]="debt.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="debt.value" name="value" placeholder="Value">
                             <input type="number" class="form-control"[(ngModel)]="debt.interest" name="interest" placeholder="Interest Rate">
-                            <button class="btn btn-default" (click)="addToArray(debt, 'schoolLoan', 'debt')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(debt, 'schoolLoan', 'debt')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>
@@ -419,7 +419,7 @@
                             <tbody>
                                 <tr *ngFor="let debt of networth.additionalDebtsValues" class="text-left">
                                 <td>{{debt.name}}</td>
-                                <td>{{debt.value}}</td>
+                                <td>{{debt.value | currency:'USD':true:'1.2-2'}}</td>
                                 <td>{{debt.interest}}</td>
                                 </tr>
                             </tbody>
@@ -430,7 +430,7 @@
                             <input type="text" class="form-control" [(ngModel)]="debt.name" name="name" placeholder="Name">
                             <input type="number" class="form-control"[(ngModel)]="debt.value" name="value" placeholder="Value">
                             <input type="number" class="form-control"[(ngModel)]="debt.interest" name="interest" placeholder="Interest Rate">
-                            <button class="btn btn-default" (click)="addToArray(debt, 'additionalDebts', 'debt')">
+                            <button class="btn btn-default plus-button" (click)="addToArray(debt, 'additionalDebts', 'debt')">
                                 <i class="fa fa-1x fa-plus"></i>
                             </button>
                         </form>

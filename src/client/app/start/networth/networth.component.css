@@ -29,3 +29,10 @@ input[type="radio"] {
     padding-right: 2px;
 }
 
+input {
+    margin-bottom: 10px;
+}
+
+.plus-button {
+    margin-bottom: 10px;
+}

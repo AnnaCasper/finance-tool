@@ -17,7 +17,7 @@
             <div class="col-sm-2"></div>
         </div>
         <div *ngIf="showNetworthTotals">
-            <h3>Your Networth is $ {{networth.networth}}</h3>
+            <h3>Your Networth is {{networth.networth | currency:'USD':true:'1.2-2'}}</h3>
         </div>
         <br>
         <hr>
