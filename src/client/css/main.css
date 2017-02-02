@@ -70,6 +70,8 @@ h1 {
 @media (max-width: 991px) {
     h1{font-size: 60px !important;}
 }
+@media (max-width: 991px) {
+}
 
 h5{
     font-size: 1.4em;
