@@ -32,9 +32,10 @@ ul {
   padding-top: 90px;
   padding-bottom: 90px;
   background-image: url('../../assets/images/image4.jpg');
-  background-repeat:no-repeat; 
-  background-size:contain; 
-  background-position:center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   color: #ffffff;
 }
 
