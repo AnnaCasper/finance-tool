@@ -17,8 +17,50 @@ ul {
     font-size: 50px !important;
 }
 
-.img-size {
-    width: 1000px;
-    height: 1000px;
+#whyDiv {
+  padding-bottom: 90px;
 }
 
+#kickstartDiv {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-color: white !important;
+  color: #272b30;
+}
+
+#stepsDiv {
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url('../../assets/images/image4.jpg');
+  background-repeat:no-repeat; 
+  background-size:contain; 
+  background-position:center;
+  color: #ffffff;
+}
+
+.sub-header-text {
+  font-size: 20px;
+}
+
+.sub-header-hr {
+   border-top: 2px solid #5f9ea0 !important;
+}
+
+.img-circle {
+  border-radius: 50% !important;
+}
+
+#getStartedDiv {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+#getStartedTitle {
+    font-family: 'Abril Fatface', cursive !important;
+    font-size: 35px;
+}
+
+.lets-go {
+  background-image: linear-gradient(#744D5F, #673C4F 60%, #5E3748) !important;
+  background-color: #673C4F !important;
+}

@@ -103,3 +103,10 @@ input {
   background-image: none;
   background-color: #1c1e22 !important;
 }
+
+#contentContainer {
+  padding: 0px !important;
+}
+
+
+
