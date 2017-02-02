@@ -11,3 +11,14 @@ ul {
   list-style-type: none;
   padding: 0 0 0 8px;
 }
+
+.home-title {
+    font-family: 'Abril Fatface', cursive !important;
+    font-size: 50px !important;
+}
+
+.img-size {
+    width: 1000px;
+    height: 1000px;
+}
+

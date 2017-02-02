@@ -106,7 +106,7 @@ export class ResourceComponent implements OnInit {
     totalDebtPercent: null,
     networth: 24750,
     networthPercent: null,
-  }
+  };
 
   /**
    * Creates an instance of the ResourceComponent with the injected
